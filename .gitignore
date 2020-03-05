@@ -1,0 +1,5 @@
+/htdocs/*
+!/htdocs/.gitkeep
+
+/mysqlvolume/*
+!/mysqlvolume/.gitkeep
