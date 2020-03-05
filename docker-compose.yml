@@ -6,7 +6,7 @@ services:
       context: .
       dockerfile: ./Dockerfile
     volumes:
-      - ./:/var/www/html
+      - ./htdocs:/var/www/html
     ports:
       - 10080:80
     links:
@@ -15,6 +15,8 @@ services:
       - mysql
   mysql:
     image: mysql:5.7
+    volumes:
+      - ./mysqlvolume:/mysqlvolume
     environment:
       - MYSQL_ROOT_PASSWORD=pass
       - MYSQL_DATABASE=php
